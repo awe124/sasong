@@ -3,29 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>양산사송 A-8BL 입주자 추가모집</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ 모바일 최적화 -->
   <style>
     body {
       margin: 0;
-      padding: 10px;
+      padding: 0;
       text-align: center;
       background-color: #f8f8f8;
       font-family: Arial, sans-serif;
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
     img {
-      width: 100%;
-      max-width: 600px;
+      width: 95%;
+      max-width: 1000px; /* ✅ PC 화면용 최적 폭 */
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
+    /* ✅ 버튼 기본 디자인 */
+    .button-container {
+      margin-top: 25px;
+    }
+    .apply-btn {
+      display: inline-block;
+      padding: 18px 55px;
+      background-color: #5669d5;
+      color: #ffeb3b;
+      text-decoration: none;
+      border-radius: 35px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .apply-btn:hover {
+      transform: scale(1.05);
+      background-color: #465bc2;
+    }
+
+    /* ✅ 모바일 반응형 조정 */
     @media (max-width: 768px) {
       img {
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .apply-btn {
+        font-size: 20px;
+        padding: 16px 40px;
+        width: 90%;
+        max-width: 400px;
       }
     }
   </style>
 </head>
 <body>
-  <img src="sasong_landing_page.jpg" alt="양산사송 A-8BL 입주자 추가모집 포스터">
+  <div class="container">
+    <img src="sasong_landing_page.jpg" alt="양산사송 A-8BL 입주자 추가모집 포스터">
+    <div class="button-container">
+      <a href="https://apply.lh.or.kr" class="apply-btn">입주자 모집 바로가기</a>
+    </div>
+  </div>
 </body>
 </html>
